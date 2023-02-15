@@ -16,7 +16,7 @@ void addNOdeToTheLeftOfSpecificData(int insert, int leftOf){
     temp->prev = NULL;
     if(head == NULL){
         head = tail = temp;
-    }else if(head->data = leftOf){
+    }else if(head->data == leftOf){
         temp->next = head;
         head->prev = temp;
         head = temp;
@@ -53,10 +53,10 @@ int main(){
     addNodeToTheEndOfTheList(5);
     addNOdeToTheLeftOfSpecificData(4,5);
 
-     Node *current = head;
+     Node *current = tail;
     while(current != NULL){
         cout << current->data;
-        current = current->next;
+        current = current->prev;
     }
     return 0;
 
